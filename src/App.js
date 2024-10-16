@@ -13,7 +13,7 @@ function App() {
 
     return (
         <div>
-            <h1>Books</h1>
+            <h1>Ham Creatures</h1>
             <ul>
                 {books.map(book => (
                     <li key={book.id}>{book.title}</li>
@@ -23,4 +23,4 @@ function App() {
     );
 }
 
-export default App;
+export default App; 
