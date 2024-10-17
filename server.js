@@ -1,44 +1,30 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const Video = require('./models/Video'); // Import the Video model
 const app = express();
 const port = 5000;
 
-// Replace with your actual MongoDB connection string
+// MongoDB connection string
 const mongoURI = 'mongodb+srv://michaeldioguardi:%24PACEwhore%242024%21@cluster0.bdxnz.mongodb.net/myLibrary?retryWrites=true&w=majority&appName=Cluster0';
 
-// Connect to MongoDB using Mongoose (removed deprecated options)
+// Connect to MongoDB using Mongoose
 mongoose.connect(mongoURI)
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.error('Failed to connect to MongoDB', err));
 
-// Define a Mongoose schema for a book
-const bookSchema = new mongoose.Schema({
-  title: {
-    type: String,
-    required: true
-  },
-  image: {
-    type: String, // This will store the path to the image file
-    required: true
-  }
-});
-
-// Create a Mongoose model based on the schema
-const Book = mongoose.model('Book', bookSchema);
-
 // Middleware to parse JSON data from incoming requests
 app.use(express.json());
 
-// Define a route to fetch a book by ID
-app.get('/api/books/:id', async (req, res) => {
+// Define a route to fetch a video by ID
+app.get('/api/videos/:id', async (req, res) => {
   try {
-    const book = await Book.findById(req.params.id);
-    if (!book) {
-      return res.status(404).json({ message: 'Book not found' });
+    const video = await Video.findById(req.params.id);
+    if (!video) {
+      return res.status(404).json({ message: 'Video not found' });
     }
-    res.json(book);
+    res.json(video);
   } catch (err) {
-    res.status(500).json({ message: 'Error fetching the book', error: err });
+    res.status(500).json({ message: 'Error fetching the video', error: err });
   }
 });
 

@@ -2,25 +2,25 @@ import React, { useState } from 'react';
 import './App.css';
 
 function App() {
-  const [book, setBook] = useState(null);
+  const [video, setVideo] = useState(null);
 
-  const fetchBook = (id) => {
-    fetch(`/api/books/${id}`)
+  // Fetch a video by its ID
+  const fetchVideo = (id) => {
+    fetch(`/api/videos/${id}`)
       .then(response => response.json())
-      .then(data => setBook(data))
-      .catch(error => console.error('Error fetching book:', error));
+      .then(data => setVideo(data))
+      .catch(error => console.error('Error fetching video:', error));
   };
 
   return (
     <div>
-      <h1>Ham Creatures</h1>
-      <button onClick={() => fetchBook('670fe7f707095f282dddc69f')}>Show Intergalactic Spore</button>
-      <button onClick={() => fetchBook('670fe7f707095f282dddc6a0')}>Show Wire Leaf</button>
+      <h1>BComply Training Videos</h1>
+      <button onClick={() => fetchVideo('YOUR_VIDEO_ID_1')}>Show Introduction to BComply</button>
+      <button onClick={() => fetchVideo('YOUR_VIDEO_ID_2')}>Show Advanced Compliance Techniques</button>
 
-      {book && (
+      {video && (
         <div>
-          <h2>{book.title}</h2>
-          <img src={book.image} alt={book.title} style={{ width: '200px', height: 'auto' }} />
+          <h2>{video.title}</h2>
         </div>
       )}
     </div>
