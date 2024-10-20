@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import SideNav from './components/SideNav/SideNav';
+import Header from './components/header/Header';
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
         <SideNav />
       </div>
       <div className='right-side'>
-    World
+        <Header />
       </div>
     </div>
   );
