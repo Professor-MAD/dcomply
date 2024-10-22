@@ -7,3 +7,47 @@
     width: 100%;
     background-color: #273135;
 }
+
+.header-elements {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 100%;
+    width: 100%;
+}
+
+.user-place-holder-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 2.8%;
+    margin-bottom: 7px;
+    border-radius: 15px;
+}
+
+.user-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #cccccc;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    margin-left: 5px;
+    height: 100%;
+    width: auto;
+}
+
+.arrow-drop-down {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #cccccc;
+    font-size: 1.5rem;
+    margin-left: 5px;
+    height: 100%;
+}

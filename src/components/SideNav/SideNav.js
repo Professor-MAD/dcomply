@@ -1,6 +1,6 @@
-import { FaHome, FaCog, FaHistory } from 'react-icons/fa'; // Importing icons
-import "./SideNav.css"
+import { FaHome, FaCog, FaHistory } from 'react-icons/fa';
 import { FaCartShopping } from 'react-icons/fa6';
+import "./SideNav.css"
 
 function SideNav() {
     return (
