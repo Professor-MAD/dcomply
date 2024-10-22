@@ -26,6 +26,7 @@
     width: 2.8%;
     margin-bottom: 7px;
     border-radius: 15px;
+    cursor: pointer;
 }
 
 .user-name {
@@ -39,6 +40,7 @@
     margin-left: 5px;
     height: 100%;
     width: auto;
+    cursor: pointer;
 }
 
 .arrow-drop-down {
@@ -50,4 +52,5 @@
     font-size: 1.5rem;
     margin-left: 5px;
     height: 100%;
+    cursor: pointer;
 }
