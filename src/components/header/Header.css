@@ -93,7 +93,13 @@
     align-items: center;
     height: 100%;
     width: 15%;
+    cursor: pointer;
 }
+
+.user-info-container.active {
+    background-color: #080808;
+}
+
 
 @media (max-width: 768px) {
     .left-side-header {

@@ -1,8 +1,31 @@
+import React, { useState, useEffect, useRef } from 'react';
 import { MdArrowDropDown } from 'react-icons/md';
 import { FaBars } from 'react-icons/fa';
 import './Header.css';
 
 function Header({ isMobile, toggleMobileMenu }) {
+  const [isUserInfoActive, setIsUserInfoActive] = useState(false);
+  const userInfoRef = useRef(null);
+
+  // Toggles the user-info-container active state
+  const toggleUserInfo = () => {
+    setIsUserInfoActive((prev) => !prev);
+  };
+
+  // Handle clicks outside the user-info-container
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (userInfoRef.current && !userInfoRef.current.contains(event.target)) {
+        setIsUserInfoActive(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   return (
     <div className="header-container">
       {/*Desktop JSX here*/}
@@ -18,14 +41,17 @@ function Header({ isMobile, toggleMobileMenu }) {
       </div>
       <div className="header-elements">
         {/*If the isMobile state is true, then display hamburger icon */}
-        {/*If the user clicks on the hamburger, we call toggleMobileMenu function */}
         {isMobile && (
           <FaBars className="hamburger-icon" onClick={toggleMobileMenu} />
         )}
         {/*If we're not in mobile mode, then we display the user info section in the header */}
         {!isMobile && (
           <>
-            <div className='user-info-container'>
+            <div
+              ref={userInfoRef}
+              className={`user-info-container ${isUserInfoActive ? 'active' : ''}`}
+              onClick={toggleUserInfo}
+            >
               <img
                 className="user-place-holder-image"
                 src="/images/user-place-holder.png"
