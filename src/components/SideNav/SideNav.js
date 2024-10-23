@@ -5,10 +5,10 @@ import "./SideNav.css"
 function SideNav() {
     return (
         <div className="side-nav-wrapper">
-            <div className="logo-container">
+            {/* <div className="logo-container">
                 <img className='dcomply-image-styles' src='/images/DComply-logo.png' alt='Dcomply logo' />
                 DComply
-            </div>
+            </div> */}
             <div className="side-nav-option">
                 <FaCog className='icon-styles'/>
                  My Modules
