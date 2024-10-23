@@ -34,6 +34,8 @@
     color: #ffffff;
     font-size: 1.5rem;
     cursor: pointer;
+    margin-right: 5px;
+    margin-bottom: 5px;
   }
   
   .dcomply-logo {
