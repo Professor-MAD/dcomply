@@ -25,13 +25,15 @@ function Header({ isMobile, toggleMobileMenu }) {
         {/*If we're not in mobile mode, then we display the user info section in the header */}
         {!isMobile && (
           <>
-            <img
-              className="user-place-holder-image"
-              src="/images/user-place-holder.png"
-              alt="place-holder"
-            />
-            <div className="user-name">Michael Dioguardi</div>
-            <MdArrowDropDown className="arrow-drop-down" />
+            <div className='user-info-container'>
+              <img
+                className="user-place-holder-image"
+                src="/images/user-place-holder.png"
+                alt="place-holder"
+              />
+              <div className="user-name">Michael Dioguardi</div>
+              <MdArrowDropDown className="arrow-drop-down" />
+            </div>
           </>
         )}
       </div>
