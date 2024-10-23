@@ -5,13 +5,15 @@ import './Header.css';
 function Header({ isMobile, toggleMobileMenu }) {
   return (
     <div className="header-container">
-      <img 
-        className='dcomply-image-styles' 
-        src='/images/DComply-logo.png' 
-        alt='Dcomply logo' 
-      />
-      <div className='dcomply-logo-text'>
+      <div className='left-side-header'>
+        <img 
+          className='dcomply-image-styles' 
+          src='/images/DComply-logo.png' 
+          alt='Dcomply logo' 
+        />
+        <div className='dcomply-logo-text'>
           DComply
+        </div>
       </div>
       <div className="header-elements">
         {isMobile && (
