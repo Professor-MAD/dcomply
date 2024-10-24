@@ -1,4 +1,19 @@
 /* General Layout for Desktop */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensures padding and border are included in element's total width/height */
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
 .app-wrapper {
     display: flex;
     flex-direction: column;
@@ -43,31 +58,36 @@
   }
   
   /* Mobile Styles */
-  @media (max-width: 768px) {
-    .main-content {
-      flex-direction: column;
-    }
-  
-    .left-side {
-      display: none; /* Hide SideNav in mobile view */
-    }
-  
-    .mobile-menu {
-      position: absolute;
-      top: 60px; /* Place beneath the header */
-      left: 0;
-      width: 100%;
-      background-color: #273135;
-      z-index: 1000;
-      padding: 10px;
-    }
-  
-    .right-side {
-      width: 100%;
-    }
-  
-    .header-elements {
-      justify-content: space-between;
-    }
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
   }
-  
+
+  .left-side {
+    display: none; /* Hide SideNav in mobile view */
+  }
+
+  .mobile-menu {
+    position: absolute;
+    top: 69px; /* Place beneath the header */
+    left: 0;
+    width: 100%;
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+    background-color: #333333;
+    z-index: 1000;
+    padding: 10px;
+    border: solid 1px black;
+  }
+
+  .right-side {
+    width: 100%;
+  }
+
+  .header-container {
+    width: 100%;
+  }
+
+  .header-elements {
+    justify-content: space-between;
+  }
+}

@@ -17,7 +17,7 @@ function UserInfoButton({ userInfoRef, isUserInfoActive, isUserDropDownDisplayed
                     alt="place-holder"
                 />
                 <div className="user-name">Michael Dioguardi</div>
-                <MdArrowDropDown className="arrow-drop-down" /> {/* Properly referenced icon */}
+                <MdArrowDropDown className="arrow-drop-down" />
             </div>
             {isUserDropDownDisplayed && (
                 <div className='drop-down-user-options'>

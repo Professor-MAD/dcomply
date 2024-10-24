@@ -81,12 +81,12 @@
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
-        align-items: flex-start;
+        align-items: center;
         height: 100%;
         width: 40%;
         background-color: #004333;
-        padding: 5px;
         padding-bottom: 5px;
+        margin-bottom: 5px;
     }
     .dcomply-logo-text {
         display: flex;
