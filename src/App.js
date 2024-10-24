@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import SideNav from './components/SideNav/SideNav';
 import Header from './components/header/Header';
-
+import UserInfoButton from './components/subcomponents/UserInfoButton';
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
@@ -17,9 +17,9 @@ function App() {
   };
 
   useEffect(() => {
-    handleResize(); //Call handleResize once to determine screen size
-    window.addEventListener('resize', handleResize); //Every time window is resized, we run handlResize to see where it's at.
-    return () => window.removeEventListener('resize', handleResize); //Clean-up function. When component unmounts. Prevents memory leaking. Removes Event Listener.
+    handleResize(); 
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (
@@ -28,6 +28,7 @@ function App() {
       <div className='main-content'>
         {isMobile && isMobileMenuOpen && (
           <div className='mobile-menu'>
+            <UserInfoButton />
             <SideNav />
           </div>
         )}
@@ -37,7 +38,6 @@ function App() {
           </div>
         )}
         <div className='right-side'>
-          {/* Content goes here */}
           <h2>Main Content</h2>
         </div>
       </div>
