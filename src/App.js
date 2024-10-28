@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import SideNav from './components/SideNav/SideNav';
 import Header from './components/header/Header';
-import UserInfoButton from './components/subcomponents/UserInfoButton';
 import MyCurrentModules from './components/myCurrentModules/MyCurrentModules';
+import UserInfoButton from './components/subcomponents/UserInfoButton';
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
@@ -18,9 +18,9 @@ function App() {
   };
 
   useEffect(() => {
-    handleResize(); //Called to have the initial width available in this useEffect thereafter
+    handleResize(); 
     window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize); //Remove eventListener to prevent memory leaks
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (
