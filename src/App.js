@@ -3,6 +3,7 @@ import './App.css';
 import SideNav from './components/SideNav/SideNav';
 import Header from './components/header/Header';
 import UserInfoButton from './components/subcomponents/UserInfoButton';
+import MyCurrentModules from './components/myCurrentModules/MyCurrentModules';
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
@@ -17,9 +18,9 @@ function App() {
   };
 
   useEffect(() => {
-    handleResize(); 
+    handleResize(); //Called to have the initial width available in this useEffect thereafter
     window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize); //Remove eventListener to prevent memory leaks
   }, []);
 
   return (
@@ -38,7 +39,7 @@ function App() {
           </div>
         )}
         <div className='right-side'>
-          <h2>Main Content</h2>
+          <MyCurrentModules />
         </div>
       </div>
     </div>
