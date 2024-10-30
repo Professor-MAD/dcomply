@@ -14,7 +14,7 @@
     justify-content: flex-end;
     align-items: flex-end;
     height: 100%;
-    width: 88%;
+    width: 100%;
 }
 
 .left-side-header {
@@ -23,13 +23,11 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 12%;
+    width: 14%;
     background-color: #004333;
     padding: 5px;
     padding-bottom: 5px;
 }
-
-
 
 .user-name {
     display: flex;
