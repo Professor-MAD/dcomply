@@ -45,7 +45,7 @@ function UserInfoButton() {
       </div>
       {isUserDropDownDisplayed && (
         <div className="drop-down-user-options">
-          <CgClose /> Log out
+          <CgClose /> Logout
         </div>
       )}
     </div>

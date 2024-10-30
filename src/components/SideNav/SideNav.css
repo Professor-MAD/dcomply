@@ -42,6 +42,10 @@
     cursor: pointer;
 }
 
+.side-nav-option:hover {
+    background-color: rgb(34, 32, 32);
+}
+
 .icon-styles {
     margin-right: 10px;
 }
@@ -74,6 +78,6 @@
 
     .side-nav-option:hover {
         color: white;
-        height: 15%;
+        background-color: transparent;
     }
 }

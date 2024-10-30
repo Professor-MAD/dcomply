@@ -88,31 +88,32 @@
     }
     
     .drop-down-user-options {
-        position: absolute; 
+        
         top: 70px; 
-        right: 0px; 
+        left: 15px; 
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
-        align-items: center;
+        align-items: flex-start;
         padding: 10px;
         padding-left: 20px;
-        background-color: white;
-        border-radius: 10px;
-        color: black;
+        background-color: transparent;
+        border-radius: none;
+        color: #cccccc;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 1rem;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
         z-index: 1000;
-        height: 35px;
-        width: 170px;
-        border: 1px solid rgba(0, 0, 0, .15);
+        height: 80px;
+        width: auto;
+        border: transparent;
         cursor: pointer;
+
     }
     
     .drop-down-user-options:hover {
-        background-color: #f5f5f5;
-        
+        color: #f5f5f5;
+        background-color: transparent;
     }
     
     .user-name {
