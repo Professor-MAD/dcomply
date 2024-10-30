@@ -29,7 +29,7 @@ function UserInfoButton() {
   }, []);
 
   return (
-    <>
+    <div>
       <div
         ref={userInfoRef}
         className={`user-info-container ${isUserInfoActive ? 'active' : ''}`}
@@ -44,11 +44,11 @@ function UserInfoButton() {
         <MdArrowDropDown className="arrow-drop-down" />
       </div>
       {isUserDropDownDisplayed && (
-        <div className='drop-down-user-options'>
+        <div className="drop-down-user-options">
           <CgClose /> Log out
         </div>
       )}
-    </>
+    </div>
   );
 }
 

@@ -124,4 +124,17 @@
         width: auto;
         cursor: pointer;
     }
+
+    .user-place-holder-image {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 8%;
+        margin-left: 15px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
 }
