@@ -29,9 +29,8 @@ function UserInfoButton() {
   }, []);
 
   return (
-    <div>
+    <div ref={userInfoRef}>
       <div
-        ref={userInfoRef}
         className={`user-info-container ${isUserInfoActive ? 'active' : ''}`}
         onClick={toggleUserInfo}
       >
