@@ -7,6 +7,7 @@
   height: 45%;
   width: 20%;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .header {
@@ -75,6 +76,10 @@
   font-weight: bold;
   padding-left: 30px;
   padding-top: 15px;
+}
+
+.active {
+  color: #23527c;
 }
 
 .description {
