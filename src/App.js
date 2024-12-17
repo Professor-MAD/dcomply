@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import './App.css';
-import SideNav from './components/SideNav/SideNav';
-import Header from './components/header/Header';
-import MyCurrentModules from './components/myCurrentModules/MyCurrentModules';
-import UserInfoButton from './components/subcomponents/UserInfoButton';
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import SideNav from "./components/SideNav/SideNav";
+import Header from "./components/Header/Header";
+import MyCurrentModules from "./components/MyCurrentModules/MyCurrentModules";
+import UserInfoButton from "./components/SubComponents/UserInfoButton";
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
@@ -18,27 +18,27 @@ function App() {
   };
 
   useEffect(() => {
-    handleResize(); 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
-    <div className='app-wrapper'>
+    <div className="app-wrapper">
       <Header isMobile={isMobile} toggleMobileMenu={toggleMobileMenu} />
-      <div className='main-content'>
+      <div className="main-content">
         {isMobile && isMobileMenuOpen && (
-          <div className='mobile-menu'>
+          <div className="mobile-menu">
             <UserInfoButton />
             <SideNav />
           </div>
         )}
         {!isMobile && (
-          <div className='left-side'>
+          <div className="left-side">
             <SideNav />
           </div>
         )}
-        <div className='right-side'>
+        <div className="right-side">
           <MyCurrentModules />
         </div>
       </div>

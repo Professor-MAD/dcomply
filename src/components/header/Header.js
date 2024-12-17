@@ -1,6 +1,6 @@
 import { FaBars } from "react-icons/fa";
 import "./Header.css";
-import UserInfoButton from "../subcomponents/UserInfoButton";
+import UserInfoButton from "../SubComponents/UserInfoButton";
 
 function Header({ isMobile, toggleMobileMenu }) {
   return (
