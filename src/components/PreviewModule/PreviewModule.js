@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./PreviewModule.css";
 
-function PreviewModule() {
+function PreviewModule({ title }) {
   const [isMonkeyHovered, setIsMonkeyHovered] = useState(false);
   const [isTitleHovered, setIsTitleHovered] = useState(false);
   return (
@@ -31,7 +31,7 @@ function PreviewModule() {
         />
       </div>
       <div className="title-and-description-container">
-        <div className={`title ${isTitleHovered ? "active" : ""}`}>Title</div>
+        <div className={`title ${isTitleHovered ? "active" : ""}`}>{title}</div>
         <div className="description"></div>
       </div>
     </div>

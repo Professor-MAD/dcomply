@@ -1,12 +1,12 @@
 import "./MyCurrentModules.css";
-import PreviewModule from "../PreviewModule/PreviewModule";
+import PreviewModuleMap from "../PreviewModule/PreviewModuleMap";
 
 function MyCurrentModules() {
   return (
     <div className="my-current-modules-parent">
       <div className="home-button">My Current Modules</div>
       <div className="preview-holder">
-        <PreviewModule />
+        <PreviewModuleMap />
       </div>
     </div>
   );
