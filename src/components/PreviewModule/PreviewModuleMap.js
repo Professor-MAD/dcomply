@@ -6,7 +6,7 @@ function PreviewModuleMap() {
   return (
     <div className="preview-module-map-container">
       {previewModuleContent.map((module, index) => (
-        <PreviewModule key={index} title={module.title} />
+        <PreviewModule key={index} title={module.title} tag={module.tag} />
       ))}
     </div>
   );

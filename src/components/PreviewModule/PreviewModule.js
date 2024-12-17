@@ -1,21 +1,35 @@
 import { useState } from "react";
 import "./PreviewModule.css";
+import InfoTag from "./InfoTag";
 
-function PreviewModule({ title }) {
+function PreviewModule({ title, tag }) {
   const [isMonkeyHovered, setIsMonkeyHovered] = useState(false);
   const [isTitleHovered, setIsTitleHovered] = useState(false);
+  const [isModuleHovered, setIsModuleHovered] = useState(false);
+
   return (
     <div
       className="preview-module-container"
       onMouseEnter={() => {
         setIsTitleHovered(true);
         setIsMonkeyHovered(true);
+        setIsModuleHovered(true);
       }}
       onMouseLeave={() => {
         setIsTitleHovered(false);
         setIsMonkeyHovered(false);
+        setIsModuleHovered(false);
       }}
     >
+      {isModuleHovered && (
+        <div className="info-tag-holder">
+          <InfoTag
+            tagTitle={tag.tagTitle}
+            tagDescription={tag.tagDescription}
+          />
+        </div>
+      )}
+
       <div className="header">
         <div className="status">Assigned</div>
       </div>
