@@ -3,9 +3,11 @@ import PreviewModule from "../PreviewModule/PreviewModule";
 
 function MyCurrentModules() {
   return (
-    <div>
+    <div className="my-current-modules-parent">
       <div className="home-button">My Current Modules</div>
-      <PreviewModule />
+      <div className="preview-holder">
+        <PreviewModule />
+      </div>
     </div>
   );
 }
