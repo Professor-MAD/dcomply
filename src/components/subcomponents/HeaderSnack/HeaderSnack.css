@@ -1,0 +1,24 @@
+.home-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 98%;
+  height: 50px;
+  color: #337ab7;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  background-color: #f5f5f5;
+  margin-left: 20px;
+  margin-top: 20px;
+  padding-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .home-button {
+    width: 93%;
+  }
+}

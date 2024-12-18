@@ -1,10 +1,11 @@
 import "./MyCurrentModules.css";
 import PreviewModuleMap from "../PreviewModule/PreviewModuleMap";
+import HeaderSnack from "../SubComponents/HeaderSnack/HeaderSnack.js";
 
 function MyCurrentModules() {
   return (
     <div className="my-current-modules-parent">
-      <div className="home-button">My Current Modules</div>
+      <HeaderSnack isMyModuleOpen={true} isMyWorkshopsOpen={false} />
       <div className="preview-holder">
         <PreviewModuleMap />
       </div>

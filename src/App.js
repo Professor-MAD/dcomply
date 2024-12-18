@@ -33,7 +33,10 @@ function App() {
         {isMobile && isMobileMenuOpen && (
           <div className="mobile-menu">
             <UserInfoButton />
-            <SideNav />
+            <SideNav
+              setIsMyModulesOpen={setIsMyModulesOpen}
+              setIsMyWorkshopsOpen={setIsMyWorkshopsOpen}
+            />
           </div>
         )}
         {!isMobile && (

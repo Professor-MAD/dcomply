@@ -3,14 +3,14 @@ import { FaCartShopping } from "react-icons/fa6";
 import "./SideNav.css";
 
 function SideNav({ setIsMyModulesOpen, setIsMyWorkshopsOpen }) {
+  const handleWorkshopClick = () => {
+    setIsMyWorkshopsOpen(true);
+    setIsMyModulesOpen(false);
+  };
+
   const handleMyModulesClick = () => {
     setIsMyModulesOpen(true);
     setIsMyWorkshopsOpen(false);
-  };
-
-  const handleWorkshopClick = () => {
-    setIsMyModulesOpen(false);
-    setIsMyWorkshopsOpen(true);
   };
 
   return (
