@@ -1,4 +1,3 @@
-// MyCurrentModules.js
 import "./MyCurrentModules.css";
 import PreviewModuleMap from "../PreviewModule/PreviewModuleMap";
 

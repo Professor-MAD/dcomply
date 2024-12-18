@@ -1,4 +1,3 @@
-// MyWorkshops.js
 import "./MyWorkshops.css";
 
 function MyWorkshops() {
