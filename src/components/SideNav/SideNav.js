@@ -2,24 +2,20 @@ import { FaHome, FaCog, FaHistory } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
 import "./SideNav.css";
 
-function SideNav({ setIsMyModulesOpen, setIsMyWorkshopsOpen }) {
-  const handleWorkshopClick = () => {
-    setIsMyWorkshopsOpen(true);
-    setIsMyModulesOpen(false);
-  };
-
-  const handleMyModulesClick = () => {
-    setIsMyModulesOpen(true);
-    setIsMyWorkshopsOpen(false);
-  };
-
+function SideNav({ setCurrentPage }) {
   return (
     <div className="side-nav-wrapper">
-      <div className="side-nav-option" onClick={handleMyModulesClick}>
+      <div
+        className="side-nav-option"
+        onClick={() => setCurrentPage("My Modules")}
+      >
         <FaCog className="icon-styles" />
         My Modules
       </div>
-      <div className="side-nav-option" onClick={handleWorkshopClick}>
+      <div
+        className="side-nav-option"
+        onClick={() => setCurrentPage("My Workshops")}
+      >
         <FaHome className="icon-styles" />
         My Workshops
       </div>
