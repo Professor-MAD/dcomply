@@ -1,63 +1,121 @@
 .user-info-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    cursor: pointer;
-    margin-right: 50px;
-    margin-bottom: 5px;
-    padding: 5px;   
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  margin-right: 50px;
+  margin-bottom: 5px;
+  padding-top: 10px;
 }
 
 .user-info-container.active {
-    background-color: #080808;
-    border-radius: 5px;
-    margin-bottom: 5px;
+  background-color: #080808;
+  border-radius: 5px;
+  margin-bottom: 5px;
 }
 
 .drop-down-user-options {
-    position: absolute; 
-    top: 60px; 
-    right: 0px; 
+  position: absolute;
+  top: 60px;
+  right: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  padding-left: 20px;
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  height: 45px;
+  width: 200px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.drop-down-user-options:hover {
+  background-color: #f5f5f5;
+}
+
+.user-place-holder-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 45px;
+  margin-bottom: 0px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.user-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  color: #cccccc;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  margin-left: 5px;
+  height: 100%;
+  width: auto;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .user-info-container {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    height: auto; /* Change height to auto to accommodate expanding content */
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+
+  .user-info-container.active {
+    background-color: #080808;
+  }
+
+  .drop-down-user-options {
+    position: relative; /* Change to relative to push content below */
+    top: 0; /* Remove fixed positioning */
+    left: 0; /* Remove fixed positioning */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
     padding: 10px;
     padding-left: 20px;
-    background-color: white;
-    border-radius: 5px;
-    color: black;
+    background-color: transparent;
+    border-radius: none;
+    color: #cccccc;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    height: 45px;
-    width: 200px;
-    border: 1px solid rgba(0, 0, 0, .15);
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+    z-index: 1; /* Lower z-index to keep it within flow */
+    height: auto; /* Allow height to adjust based on content */
+    width: auto; /* Adjust width */
+    border: transparent;
     cursor: pointer;
-}
+    margin-top: 10px; /* Add margin to create space beneath user info */
+  }
 
-.drop-down-user-options:hover {
-    background-color: #f5f5f5;
-    
-}
+  .drop-down-user-options:hover {
+    color: #f5f5f5;
+    background-color: transparent;
+  }
 
-.user-place-holder-image {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 80%;
-    width: 45px;
-    margin-bottom: 0px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.user-name {
+  .user-name {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -69,76 +127,17 @@
     height: 100%;
     width: auto;
     cursor: pointer;
-}
+  }
 
-@media (max-width: 768px) {
-    .user-info-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        height: auto; /* Change height to auto to accommodate expanding content */
-        width: 100%;
-        cursor: pointer;
-        margin-bottom: 20px;
-    }
-    
-    .user-info-container.active {
-        background-color: #080808;
-    }
-    
-    .drop-down-user-options {
-        position: relative; /* Change to relative to push content below */
-        top: 0; /* Remove fixed positioning */
-        left: 0; /* Remove fixed positioning */
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding: 10px;
-        padding-left: 20px;
-        background-color: transparent;
-        border-radius: none;
-        color: #cccccc;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1rem;
-        box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
-        z-index: 1; /* Lower z-index to keep it within flow */
-        height: auto; /* Allow height to adjust based on content */
-        width: auto; /* Adjust width */
-        border: transparent;
-        cursor: pointer;
-        margin-top: 10px; /* Add margin to create space beneath user info */
-    }
-    
-    .drop-down-user-options:hover {
-        color: #f5f5f5;
-        background-color: transparent;
-    }
-    
-    .user-name {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        color: #cccccc;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1rem;
-        margin-left: 5px;
-        height: 100%;
-        width: auto;
-        cursor: pointer;
-    }
-
-    .user-place-holder-image {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: 8%;
-        margin-left: 15px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
+  .user-place-holder-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 8%;
+    margin-left: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 }

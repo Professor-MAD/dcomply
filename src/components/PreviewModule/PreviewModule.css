@@ -108,3 +108,117 @@
   width: 100%;
   height: 55%;
 }
+
+@media (max-width: 768px) {
+  .preview-module-map-container {
+    height: 95%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* background-color: blue; */
+  }
+
+  .preview-module-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    position: relative; /* Prevents unwanted overlaps */
+    background-color: #fff;
+    cursor: pointer;
+    height: 50%;
+    width: 100%;
+  }
+
+  .info-tag-holder {
+    position: relative;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    /* background-color: green; */
+    height: 7%;
+    width: 100%;
+  }
+
+  .status {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #337ab7;
+    height: 100%;
+    width: 25%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+  }
+
+  .preview-icon-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* background-color: purple; */
+    width: 90%;
+    height: 70%;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  .monkey-reading {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 225px;
+    width: 225px;
+  }
+
+  .title-and-description-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+  }
+
+  .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* background-color: salmon; */
+    width: 100%;
+    height: 45%;
+    color: #337ab7;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding-left: 15px;
+    padding-top: 20px;
+  }
+
+  .active {
+    color: #23527c;
+  }
+
+  .description {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* background-color: aqua; */
+    width: 100%;
+    height: 55%;
+  }
+}
