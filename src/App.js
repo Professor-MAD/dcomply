@@ -4,10 +4,13 @@ import SideNav from "./components/SideNav/SideNav";
 import Header from "./components/Header/Header";
 import MyCurrentModules from "./components/MyCurrentModules/MyCurrentModules";
 import UserInfoButton from "./components/SubComponents/UserInfoButton";
+import MyWorkshops from "./components/MyWorkshops/MyWorkshops";
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMyModulesOpen, setIsMyModulesOpen] = useState(true);
+  const [isMyWorkshopsOpen, setIsMyWorkshopsOpen] = useState(false);
 
   const handleResize = () => {
     setIsMobile(window.innerWidth <= 768);
@@ -35,11 +38,15 @@ function App() {
         )}
         {!isMobile && (
           <div className="left-side">
-            <SideNav />
+            <SideNav
+              setIsMyModulesOpen={setIsMyModulesOpen}
+              setIsMyWorkshopsOpen={setIsMyWorkshopsOpen}
+            />
           </div>
         )}
         <div className="right-side">
-          <MyCurrentModules />
+          {isMyModulesOpen && <MyCurrentModules />}
+          {isMyWorkshopsOpen && <MyWorkshops />}
         </div>
       </div>
     </div>
