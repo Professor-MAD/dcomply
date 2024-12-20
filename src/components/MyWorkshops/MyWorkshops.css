@@ -1,3 +1,8 @@
+.my-workshops-parent {
+  height: 100%;
+  width: 100%;
+}
+
 .home-button {
   display: flex;
   flex-direction: row;
@@ -17,8 +22,110 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.preview-holder {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* background-color: red; */
+  height: 100%;
+  width: 100%;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.no-current-modules {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 12%;
+  width: 98%;
+  background-color: #fcf8e3;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  box-shadow: 0px 4px 8px rgba(138, 109, 59, 0.5);
+}
+
+.top-div-no-current-modules {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+  width: 100%;
+  color: #8a6d3b;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.bottom-div-no-current-modules {
+  display: flex; /* Flexbox layout */
+  flex-direction: row; /* Align elements in a row */
+  justify-content: center; /* Center align content */
+  align-items: center; /* Vertically center */
+  height: auto; /* Allow content to determine height */
+  width: 100%; /* Full width */
+  color: #8a6d3b; /* Default text color */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+.email-link {
+  color: #337ab7; /* Blue color for the link */
+  text-decoration: none; /* Remove underline */
+}
+
+.email-link:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+
 @media (max-width: 768px) {
   .home-button {
     width: 93%;
+  }
+
+  .no-current-modules {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    width: 93%;
+    background-color: #fcf8e3;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    box-shadow: 0px 4px 8px rgba(138, 109, 59, 0.5);
+  }
+
+  .top-div-no-current-modules {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    width: 100%;
+    color: #8a6d3b;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .bottom-div-no-current-modules {
+    display: flex; /* Flexbox layout */
+    flex-direction: row; /* Align elements in a row */
+    justify-content: center; /* Center align content */
+    align-items: center; /* Vertically center */
+    height: auto; /* Allow content to determine height */
+    width: 100%; /* Full width */
+    color: #8a6d3b; /* Default text color */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7rem;
+  }
+
+  .email-link {
+    color: #337ab7; /* Blue color for the link */
+    text-decoration: none; /* Remove underline */
+  }
+
+  .email-link:hover {
+    text-decoration: underline; /* Add underline on hover */
   }
 }
