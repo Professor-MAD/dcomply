@@ -5,12 +5,11 @@ import Header from "./components/Header/Header";
 import MyCurrentModules from "./components/MyCurrentModules/MyCurrentModules";
 import UserInfoButton from "./components/SubComponents/UserInfoButton";
 import MyWorkshops from "./components/MyWorkshops/MyWorkshops";
-import HeaderSnack from "./components/SubComponents/HeaderSnack/HeaderSnack";
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [currentPage, setCurrentPage] = useState("My Modules");
+  const [currentPage, setCurrentPage] = useState("modules");
 
   const handleResize = () => {
     setIsMobile(window.innerWidth <= 768);
@@ -25,17 +24,6 @@ function App() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
-  const renderCurrentPage = () => {
-    switch (currentPage) {
-      case "My Modules":
-        return <MyCurrentModules />;
-      case "My Workshops":
-        return <MyWorkshops />;
-      default:
-        return <div>Page Not Found</div>;
-    }
-  };
 
   return (
     <div className="app-wrapper">
@@ -53,8 +41,8 @@ function App() {
           </div>
         )}
         <div className="right-side">
-          <HeaderSnack currentPage={currentPage} />
-          {renderCurrentPage()}
+          {currentPage === "modules" && <MyCurrentModules />}
+          {currentPage === "workshops" && <MyWorkshops />}
         </div>
       </div>
     </div>

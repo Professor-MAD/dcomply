@@ -7,14 +7,14 @@ function SideNav({ setCurrentPage }) {
     <div className="side-nav-wrapper">
       <div
         className="side-nav-option"
-        onClick={() => setCurrentPage("My Modules")}
+        onClick={() => setCurrentPage("modules")}
       >
         <FaCog className="icon-styles" />
         My Modules
       </div>
       <div
         className="side-nav-option"
-        onClick={() => setCurrentPage("My Workshops")}
+        onClick={() => setCurrentPage("workshops")}
       >
         <FaHome className="icon-styles" />
         My Workshops
