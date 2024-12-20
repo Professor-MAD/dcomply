@@ -3,8 +3,8 @@ import "./App.css";
 import SideNav from "./components/SideNav/SideNav";
 import Header from "./components/Header/Header";
 import MyCurrentModules from "./components/MyCurrentModules/MyCurrentModules";
-import UserInfoButton from "./components/SubComponents/UserInfoButton";
 import MyWorkshops from "./components/MyWorkshops/MyWorkshops";
+import Snack from "./components/Snack/Snack";
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
@@ -25,13 +25,17 @@ function App() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const snackContent = {
+    modules: "My Current Modules",
+    workshops: "My Current Workshops",
+  };
+
   return (
     <div className="app-wrapper">
       <Header isMobile={isMobile} toggleMobileMenu={toggleMobileMenu} />
       <div className="main-content">
         {isMobile && isMobileMenuOpen && (
           <div className="mobile-menu">
-            <UserInfoButton />
             <SideNav setCurrentPage={setCurrentPage} />
           </div>
         )}
@@ -41,6 +45,7 @@ function App() {
           </div>
         )}
         <div className="right-side">
+          <Snack content={snackContent[currentPage]} />
           {currentPage === "modules" && <MyCurrentModules />}
           {currentPage === "workshops" && <MyWorkshops />}
         </div>

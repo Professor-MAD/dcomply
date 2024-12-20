@@ -3,7 +3,6 @@ import "./MyWorkshops.css";
 function MyWorkshops() {
   return (
     <div className="my-workshops-parent">
-      <div className="home-button">My Current Workshops</div>
       <div className="preview-holder">
         <div className="no-current-modules">
           <div className="top-div-no-current-modules">

@@ -1,0 +1,15 @@
+.snack {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 50px;
+  width: 98%;
+  background-color: #f5f5f5;
+  color: #337ab7;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  margin: 20px;
+  padding-left: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
